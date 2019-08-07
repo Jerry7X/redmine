@@ -1,0 +1,1903 @@
+Thread 258 (Thread 0x7f4ffabff700 (LWP 31916)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50001eb4db in ceph::log::Log::entry (this=0x7f4ffac3c880) at log/Log.cc:457
+#2  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#3  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 257 (Thread 0x7f4ff96ca700 (LWP 31956)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50002b3cfa in WaitUntil (when=..., mutex=..., this=0x7f4fface2760) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4fface2760) at ./common/Cond.h:81
+#3  CephContextServiceThread::entry (this=0x7f4fface26e0) at common/ceph_context.cc:99
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 256 (Thread 0x7f4ff8ec9700 (LWP 31957)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000292133 in poll (__timeout=-1, __nfds=2, __fds=0x7f4ff8ec7cc0) at /usr/include/bits/poll2.h:46
+#2  AdminSocket::entry (this=0x7f4ffac3f8c0) at common/admin_socket.cc:267
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 255 (Thread 0x7f4ff86c8700 (LWP 31966)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffcb8cd3 in __gthread_cond_timedwait (__abs_timeout=0x7f4ff86c6db0, __mutex=<optimized out>, __cond=0x7f4ffad10968) at /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/gthr-default.h:871
+#2  __wait_until_impl<std::chrono::duration<unsigned long, std::ratio<1l, 1000000000l> > > (__atime=<synthetic pointer>, __lock=..., this=0x7f4ffad10968) at /usr/include/c++/4.8.2/condition_variable:160
+#3  wait_until<ceph::time_detail::mono_clock, std::chrono::duration<unsigned long, std::ratio<1l, 1000000000l> > > (__atime=..., __lock=..., this=0x7f4ffad10968) at /usr/include/c++/4.8.2/condition_variable:113
+#4  ceph::timer_detail::timer<ceph::time_detail::mono_clock>::timer_thread (this=0x7f4ffad10900) at ./common/ceph_timer.h:149
+#5  0x00007f4ffd3a4220 in ?? () from /lib64/libstdc++.so.6
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 254 (Thread 0x7f4ff7ec7700 (LWP 31972)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000274b97 in Wait (mutex=..., this=0x7f4ffad0e360) at ./common/Cond.h:56
+#2  SimpleMessenger::reaper_entry (this=0x7f4ffad0dd00) at msg/simple/SimpleMessenger.cc:217
+#3  0x00007f500027a36d in SimpleMessenger::ReaperThread::entry (this=<optimized out>) at msg/simple/SimpleMessenger.h:196
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 253 (Thread 0x7f4ff76c6700 (LWP 31973)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000274b97 in Wait (mutex=..., this=0x7f4ffad0f160) at ./common/Cond.h:56
+#2  SimpleMessenger::reaper_entry (this=0x7f4ffad0eb00) at msg/simple/SimpleMessenger.cc:217
+#3  0x00007f500027a36d in SimpleMessenger::ReaperThread::entry (this=<optimized out>) at msg/simple/SimpleMessenger.h:196
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 252 (Thread 0x7f4ff6ec5700 (LWP 31974)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000274b97 in Wait (mutex=..., this=0x7f4ffad0ff60) at ./common/Cond.h:56
+#2  SimpleMessenger::reaper_entry (this=0x7f4ffad0f900) at msg/simple/SimpleMessenger.cc:217
+#3  0x00007f500027a36d in SimpleMessenger::ReaperThread::entry (this=<optimized out>) at msg/simple/SimpleMessenger.h:196
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 251 (Thread 0x7f4ff66c4700 (LWP 31975)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000274b97 in Wait (mutex=..., this=0x7f4ffad0f860) at ./common/Cond.h:56
+#2  SimpleMessenger::reaper_entry (this=0x7f4ffad0f200) at msg/simple/SimpleMessenger.cc:217
+#3  0x00007f500027a36d in SimpleMessenger::ReaperThread::entry (this=<optimized out>) at msg/simple/SimpleMessenger.h:196
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 250 (Thread 0x7f4ff5ec3700 (LWP 31976)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000274b97 in Wait (mutex=..., this=0x7f4ffad0ea60) at ./common/Cond.h:56
+#2  SimpleMessenger::reaper_entry (this=0x7f4ffad0e400) at msg/simple/SimpleMessenger.cc:217
+#3  0x00007f500027a36d in SimpleMessenger::ReaperThread::entry (this=<optimized out>) at msg/simple/SimpleMessenger.h:196
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 249 (Thread 0x7f4ff56c2700 (LWP 31977)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000274b97 in Wait (mutex=..., this=0x7f4ffad10660) at ./common/Cond.h:56
+#2  SimpleMessenger::reaper_entry (this=0x7f4ffad10000) at msg/simple/SimpleMessenger.cc:217
+#3  0x00007f500027a36d in SimpleMessenger::ReaperThread::entry (this=<optimized out>) at msg/simple/SimpleMessenger.h:196
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 248 (Thread 0x7f4ff4ec1700 (LWP 31978)):
+#0  0x00007f4ffe486f4d in __lll_lock_wait () from /lib64/libpthread.so.0
+#1  0x00007f4ffe4894bc in _L_cond_lock_792 () from /lib64/libpthread.so.0
+#2  0x00007f4ffe489398 in __pthread_mutex_cond_lock () from /lib64/libpthread.so.0
+#3  0x00007f4ffe484b54 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#4  0x00007f5000286c66 in WaitUntil (when=..., mutex=..., this=0x7f4ffade4080) at common/Cond.h:72
+#5  SafeTimer::timer_thread (this=0x7f4ffade4070) at common/Timer.cc:118
+#6  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#7  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 247 (Thread 0x7f4ff46c0700 (LWP 31979)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000286c66 in WaitUntil (when=..., mutex=..., this=0x7f4ffade41a0) at common/Cond.h:72
+#2  SafeTimer::timer_thread (this=0x7f4ffade4190) at common/Timer.cc:118
+#3  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 246 (Thread 0x7f4ff3ebf700 (LWP 31980)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50002869df in Wait (mutex=..., this=0x7f4ffade65f8) at common/Cond.h:56
+#2  SafeTimer::timer_thread (this=0x7f4ffade65e8) at common/Timer.cc:116
+#3  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 245 (Thread 0x7f4ff21ce700 (LWP 32203)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4ffffba4a7 in Wait (mutex=..., this=0x7f4fface7820) at ./common/Cond.h:56
+#2  WBThrottle::get_next_should_flush (this=this@entry=0x7f4fface76f8, next=next@entry=0x7f4ff21ccd00) at os/filestore/WBThrottle.cc:139
+#3  0x00007f4ffffbab1a in WBThrottle::entry (this=0x7f4fface76f8) at os/filestore/WBThrottle.cc:157
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 244 (Thread 0x7f4ff19cd700 (LWP 32204)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4ffff9d899 in WaitUntil (when=..., mutex=..., this=0x7f4fface7530) at ./common/Cond.h:72
+#2  Cond::WaitInterval (this=this@entry=0x7f4fface7530, cct=<optimized out>, mutex=..., interval=...) at ./common/Cond.h:81
+#3  0x00007f4ffff7ba9e in FileStore::sync_entry (this=0x7f4fface7000) at os/filestore/FileStore.cc:3710
+#4  0x00007f4ffffa40ad in FileStore::SyncThread::entry (this=<optimized out>) at os/filestore/FileStore.h:185
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 243 (Thread 0x7f4ff11cc700 (LWP 32205)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc83b4e in Cond::Wait (this=0x7f4ffad98140, mutex=...) at ./common/Cond.h:56
+#2  0x00007f500005b024 in FileJournal::write_thread_entry (this=0x7f4ffad98000) at os/filestore/FileJournal.cc:1273
+#3  0x00007f4ffff9c90d in FileJournal::Writer::entry (this=<optimized out>) at os/filestore/FileJournal.h:372
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 242 (Thread 0x7f4ff03ff700 (LWP 32207)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50001d23c0 in Wait (mutex=..., this=0x7f4fface7080) at ./common/Cond.h:56
+#2  Finisher::finisher_thread_entry (this=0x7f4fface7020) at common/Finisher.cc:96
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 241 (Thread 0x7f4fefbfe700 (LWP 32208)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4fface7b20) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4fface7b20) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4fface7aa0, wt=0x7f4ff2828a90) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 240 (Thread 0x7f4fef3fd700 (LWP 32209)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4fface7b20) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4fface7b20) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4fface7aa0, wt=0x7f4ff2828af0) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 239 (Thread 0x7f4feebfc700 (LWP 32210)):
+#0  0x00007f4ffe486f4d in __lll_lock_wait () from /lib64/libpthread.so.0
+#1  0x00007f4ffe482d02 in _L_lock_791 () from /lib64/libpthread.so.0
+#2  0x00007f4ffe482c08 in pthread_mutex_lock () from /lib64/libpthread.so.0
+#3  0x00007f5000250138 in Mutex::Lock (this=this@entry=0x7f4fe6124528, no_lockdep=no_lockdep@entry=false) at common/Mutex.cc:110
+#4  0x00007f4fffce26a0 in PG::lock (this=this@entry=0x7f4fe6124000, no_lockdep=no_lockdep@entry=false) at osd/PG.cc:275
+#5  0x00007f4fffc6752e in OSD::consume_map (this=this@entry=0x7f4ffade4000) at osd/OSD.cc:7306
+#6  0x00007f4fffc6b2d4 in OSD::_committed_osd_maps (this=0x7f4ffade4000, first=<optimized out>, last=817, m=0x7f4f2052b380) at osd/OSD.cc:7117
+#7  0x00007f4fffc7ba19 in Context::complete (this=0x7f4f664154e0, r=<optimized out>) at ./include/Context.h:64
+#8  0x00007f50001d2186 in Finisher::finisher_thread_entry (this=0x7f4ffac3ca00) at common/Finisher.cc:68
+#9  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#10 0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 238 (Thread 0x7f4fee3fb700 (LWP 32211)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50001d23c0 in Wait (mutex=..., this=0x7f4ffac3cbe0) at ./common/Cond.h:56
+#2  Finisher::finisher_thread_entry (this=0x7f4ffac3cb80) at common/Finisher.cc:96
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 237 (Thread 0x7f4fed3ff700 (LWP 32212)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50002869df in Wait (mutex=..., this=0x7f4fface75d8) at common/Cond.h:56
+#2  SafeTimer::timer_thread (this=0x7f4fface75c8) at common/Timer.cc:116
+#3  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 236 (Thread 0x7f4fd9bff700 (LWP 7394)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4ffee3d0d3 in leveldb::(anonymous namespace)::PosixEnv::BGThreadWrapper(void*) () from /var/lib/ceph/lib/libleveldb.so.1
+#2  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#3  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 235 (Thread 0x7f4f9b7ff700 (LWP 10944)):
+#0  0x00007f4ffe486f4d in __lll_lock_wait () from /lib64/libpthread.so.0
+#1  0x00007f4ffe482d02 in _L_lock_791 () from /lib64/libpthread.so.0
+#2  0x00007f4ffe482c08 in pthread_mutex_lock () from /lib64/libpthread.so.0
+#3  0x00007f5000250138 in Mutex::Lock (this=this@entry=0x7f4ffade4018, no_lockdep=no_lockdep@entry=false) at common/Mutex.cc:110
+#4  0x00007f4fffc74019 in OSD::ms_dispatch (this=0x7f4ffade4000, m=0x7f4f8083b000) at osd/OSD.cc:5889
+#5  0x00007f500035b5ab in ms_deliver_dispatch (m=0x7f4f8083b000, this=0x7f4ffad0dd00) at ./msg/Messenger.h:584
+#6  DispatchQueue::entry (this=0x7f4ffad0ded0) at msg/simple/DispatchQueue.cc:185
+#7  0x00007f500027983d in DispatchQueue::DispatchThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:103
+#8  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#9  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 234 (Thread 0x7f4f9affe700 (LWP 10945)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035ae3f in Wait (mutex=..., this=0x7f4ffad0e0e8) at ./common/Cond.h:56
+#2  DispatchQueue::run_local_delivery (this=0x7f4ffad0ded0) at msg/simple/DispatchQueue.cc:114
+#3  0x00007f500027985d in DispatchQueue::LocalDeliveryThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:117
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 233 (Thread 0x7f4f9a7fd700 (LWP 10946)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f500033b681 in poll (__timeout=-1, __nfds=1, __fds=0x7f4f9a7fbc20) at /usr/include/bits/poll2.h:46
+#2  Accepter::entry (this=0x7f4ffad0de90) at msg/simple/Accepter.cc:227
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 232 (Thread 0x7f4f99ffc700 (LWP 10947)):
+#0  0x00007f4ffe486f4d in __lll_lock_wait () from /lib64/libpthread.so.0
+#1  0x00007f4ffe482d02 in _L_lock_791 () from /lib64/libpthread.so.0
+#2  0x00007f4ffe482c08 in pthread_mutex_lock () from /lib64/libpthread.so.0
+#3  0x00007f5000250138 in Mutex::Lock (this=this@entry=0x7f4ffade4018, no_lockdep=no_lockdep@entry=false) at common/Mutex.cc:110
+#4  0x00007f4fffc74019 in OSD::ms_dispatch (this=0x7f4ffade4000, m=0x7f4f1042ce80) at osd/OSD.cc:5889
+#5  0x00007f500035b5ab in ms_deliver_dispatch (m=0x7f4f1042ce80, this=0x7f4ffad0e400) at ./msg/Messenger.h:584
+#6  DispatchQueue::entry (this=0x7f4ffad0e5d0) at msg/simple/DispatchQueue.cc:185
+#7  0x00007f500027983d in DispatchQueue::DispatchThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:103
+#8  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#9  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 231 (Thread 0x7f4f997fb700 (LWP 10948)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035ae3f in Wait (mutex=..., this=0x7f4ffad0e7e8) at ./common/Cond.h:56
+#2  DispatchQueue::run_local_delivery (this=0x7f4ffad0e5d0) at msg/simple/DispatchQueue.cc:114
+#3  0x00007f500027985d in DispatchQueue::LocalDeliveryThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:117
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 230 (Thread 0x7f4f987f9700 (LWP 10950)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035b1b8 in Wait (mutex=..., this=0x7f4ffad0ed38) at ./common/Cond.h:56
+#2  DispatchQueue::entry (this=0x7f4ffad0ecd0) at msg/simple/DispatchQueue.cc:196
+#3  0x00007f500027983d in DispatchQueue::DispatchThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:103
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 229 (Thread 0x7f4f97ff8700 (LWP 10951)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035ae3f in Wait (mutex=..., this=0x7f4ffad0eee8) at ./common/Cond.h:56
+#2  DispatchQueue::run_local_delivery (this=0x7f4ffad0ecd0) at msg/simple/DispatchQueue.cc:114
+#3  0x00007f500027985d in DispatchQueue::LocalDeliveryThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:117
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 228 (Thread 0x7f4f977f7700 (LWP 10952)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035b1b8 in Wait (mutex=..., this=0x7f4ffad0fb38) at ./common/Cond.h:56
+#2  DispatchQueue::entry (this=0x7f4ffad0fad0) at msg/simple/DispatchQueue.cc:196
+#3  0x00007f500027983d in DispatchQueue::DispatchThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:103
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 227 (Thread 0x7f4f96ff6700 (LWP 10953)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035ae3f in Wait (mutex=..., this=0x7f4ffad0fce8) at ./common/Cond.h:56
+#2  DispatchQueue::run_local_delivery (this=0x7f4ffad0fad0) at msg/simple/DispatchQueue.cc:114
+#3  0x00007f500027985d in DispatchQueue::LocalDeliveryThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:117
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 226 (Thread 0x7f4f95ff4700 (LWP 10955)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035b1b8 in Wait (mutex=..., this=0x7f4ffad0f438) at ./common/Cond.h:56
+#2  DispatchQueue::entry (this=0x7f4ffad0f3d0) at msg/simple/DispatchQueue.cc:196
+#3  0x00007f500027983d in DispatchQueue::DispatchThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:103
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 225 (Thread 0x7f4f957f3700 (LWP 10956)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035ae3f in Wait (mutex=..., this=0x7f4ffad0f5e8) at ./common/Cond.h:56
+#2  DispatchQueue::run_local_delivery (this=0x7f4ffad0f3d0) at msg/simple/DispatchQueue.cc:114
+#3  0x00007f500027985d in DispatchQueue::LocalDeliveryThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:117
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 224 (Thread 0x7f4f947f1700 (LWP 10958)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035b1b8 in Wait (mutex=..., this=0x7f4ffad10238) at ./common/Cond.h:56
+#2  DispatchQueue::entry (this=0x7f4ffad101d0) at msg/simple/DispatchQueue.cc:196
+#3  0x00007f500027983d in DispatchQueue::DispatchThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:103
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 223 (Thread 0x7f4f93ff0700 (LWP 10959)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500035ae3f in Wait (mutex=..., this=0x7f4ffad103e8) at ./common/Cond.h:56
+#2  DispatchQueue::run_local_delivery (this=0x7f4ffad101d0) at msg/simple/DispatchQueue.cc:114
+#3  0x00007f500027985d in DispatchQueue::LocalDeliveryThread::entry (this=<optimized out>) at msg/simple/DispatchQueue.h:117
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 222 (Thread 0x7f4f937ef700 (LWP 10960)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000286c66 in WaitUntil (when=..., mutex=..., this=0x7ffcc4f0cc48) at common/Cond.h:72
+#2  SafeTimer::timer_thread (this=0x7ffcc4f0cc38) at common/Timer.cc:118
+#3  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 221 (Thread 0x7f4f92fee700 (LWP 10961)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50001d23c0 in Wait (mutex=..., this=0x7ffcc4f0cd60) at ./common/Cond.h:56
+#2  Finisher::finisher_thread_entry (this=0x7ffcc4f0cd00) at common/Finisher.cc:96
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 220 (Thread 0x7f4f927ed700 (LWP 10962)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4ffade4650) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffade4650) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4ffade45d0, wt=0x7f4ff2ce5040) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 219 (Thread 0x7f4f91fec700 (LWP 10963)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4ffade4650) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffade4650) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4ffade45d0, wt=0x7f4ff2ce4fa0) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 218 (Thread 0x7f4f917eb700 (LWP 10964)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc0cd8) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc0cd8) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f8f817040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 217 (Thread 0x7f4f90fea700 (LWP 10965)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc0e18) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc0e18) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f8fc17040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 216 (Thread 0x7f4f8f7ff700 (LWP 10966)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc0f58) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc0f58) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f8c817040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 215 (Thread 0x7f4f8e7ff700 (LWP 10967)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc1098) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc1098) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f8cc17040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 214 (Thread 0x7f4f8dbfe700 (LWP 10968)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc11d8) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc11d8) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f8ac17040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 213 (Thread 0x7f4f8c7ff700 (LWP 10969)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc0cd8) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc0cd8) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f8b017040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 212 (Thread 0x7f4f8bffe700 (LWP 10970)):
+#0  0x00007f4ffd3acdf7 in std::string::_M_mutate(unsigned long, unsigned long, unsigned long) () from /lib64/libstdc++.so.6
+#1  0x00007f4ffee35a61 in leveldb::Block::Iter::Prev() () from /var/lib/ceph/lib/libleveldb.so.1
+#2  0x00007f4ffee3a72e in leveldb::(anonymous namespace)::TwoLevelIterator::Prev() () from /var/lib/ceph/lib/libleveldb.so.1
+#3  0x00007f4ffee3a72e in leveldb::(anonymous namespace)::TwoLevelIterator::Prev() () from /var/lib/ceph/lib/libleveldb.so.1
+#4  0x00007f4ffee37bb1 in leveldb::(anonymous namespace)::MergingIterator::Prev() () from /var/lib/ceph/lib/libleveldb.so.1
+#5  0x00007f4ffee20966 in leveldb::(anonymous namespace)::DBIter::FindPrevUserEntry() () from /var/lib/ceph/lib/libleveldb.so.1
+#6  0x00007f4ffee20e1f in leveldb::(anonymous namespace)::DBIter::Prev() () from /var/lib/ceph/lib/libleveldb.so.1
+#7  0x00007f50000855db in LevelDBStore::LevelDBWholeSpaceIteratorImpl::seek_to_last (this=0x7f4f00b15208, prefix=...) at kv/LevelDBStore.h:247
+#8  0x00007f500003b4e5 in seek_to_last (this=<optimized out>) at ./kv/KeyValueDB.h:192
+#9  DBObjectMap::DBObjectMapIteratorImpl::in_complete_region (this=this@entry=0x7f4f20b80118, to_test="20160728/20100903/0301/NB-20100903-031000000523-9161-120176001.pdf", begin=begin@entry=0x7f4f8bffb770, end=end@entry=0x7f4f8bffb780) at os/filestore/DBObjectMap.cc:378
+#10 0x00007f500003ccde in DBObjectMap::DBObjectMapIteratorImpl::adjust (this=0x7f4f20b80118) at os/filestore/DBObjectMap.cc:401
+#11 0x00007f4fffe1f8bc in ReplicatedBackend::be_deep_scrub (this=0x7f4f9cca2600, poid=..., seed=<optimized out>, o=..., handle=...) at osd/ReplicatedBackend.cc:808
+#12 0x00007f4fffe0e331 in PGBackend::be_scan_list (this=0x7f4f9cca2600, map=..., ls=std::vector of length 11, capacity 12 = {...}, deep=deep@entry=true, seed=seed@entry=4294967295, handle=...) at osd/PGBackend.cc:382
+#13 0x00007f4fffd10343 in PG::build_scrub_map_chunk (this=this@entry=0x7f4fe6124000, map=..., start=..., end=..., deep=deep@entry=true, seed=seed@entry=4294967295, handle=...) at osd/PG.cc:3866
+#14 0x00007f4fffd10ba8 in PG::replica_scrub (this=this@entry=0x7f4fe6124000, op=std::shared_ptr (count 4, weak 0) 0x7f4f0091cc00, handle=...) at osd/PG.cc:3974
+#15 0x00007f4fffd92226 in ReplicatedPG::do_request (this=0x7f4fe6124000, op=std::shared_ptr (count 4, weak 0) 0x7f4f0091cc00, handle=...) at osd/ReplicatedPG.cc:1517
+#16 0x00007f4fffc4e9b5 in OSD::dequeue_op (this=0x7f4ffade4000, pg=..., op=std::shared_ptr (count 4, weak 0) 0x7f4f0091cc00, handle=...) at osd/OSD.cc:8956
+#17 0x00007f4fffc4ebdd in PGQueueable::RunVis::operator() (this=this@entry=0x7f4f8bffc7e0, op=std::shared_ptr (count 4, weak 0) 0x7f4f0091cc00) at osd/OSD.cc:165
+#18 0x00007f4fffc531d7 in internal_visit<std::shared_ptr<OpRequest> > (operand=std::shared_ptr (count 4, weak 0) 0x7f4f0091cc00, this=<synthetic pointer>) at /usr/include/boost/variant/variant.hpp:1017
+#19 visitation_impl_invoke_impl<boost::detail::variant::invoke_visitor<PGQueueable::RunVis>, void*, std::shared_ptr<OpRequest> > (storage=0x7f4f8bffc9d0, visitor=<synthetic pointer>) at /usr/include/boost/variant/detail/visitation_impl.hpp:130
+#20 visitation_impl_invoke<boost::detail::variant::invoke_visitor<PGQueueable::RunVis>, void*, std::shared_ptr<OpRequest>, boost::variant<std::shared_ptr<OpRequest>, PGSnapTrim, PGScrub>::has_fallback_type_> (internal_which=<optimized out>, t=0x0, storage=0x7f4f8bffc9d0, visitor=<synthetic pointer>) at /usr/include/boost/variant/detail/visitation_impl.hpp:173
+#21 visitation_impl<mpl_::int_<0>, boost::detail::variant::visitation_impl_step<boost::mpl::l_iter<boost::mpl::l_item<mpl_::long_<3l>, std::shared_ptr<OpRequest>, boost::mpl::l_item<mpl_::long_<2l>, PGSnapTrim, boost::mpl::l_item<mpl_::long_<1l>, PGScrub, boost::mpl::l_end> > > >, boost::mpl::l_iter<boost::mpl::l_end> >, boost::detail::variant::invoke_visitor<PGQueueable::RunVis>, void*, boost::variant<std::shared_ptr<OpRequest>, PGSnapTrim, PGScrub>::has_fallback_type_> (no_backup_flag=..., storage=0x7f4f8bffc9d0, visitor=<synthetic pointer>, logical_which=<optimized out>, internal_which=<optimized out>) at /usr/include/boost/variant/detail/visitation_impl.hpp:256
+#22 internal_apply_visitor_impl<boost::detail::variant::invoke_visitor<PGQueueable::RunVis>, void*> (storage=0x7f4f8bffc9d0, visitor=<synthetic pointer>, logical_which=<optimized out>, internal_which=<optimized out>) at /usr/include/boost/variant/variant.hpp:2326
+#23 internal_apply_visitor<boost::detail::variant::invoke_visitor<PGQueueable::RunVis> > (visitor=<synthetic pointer>, this=0x7f4f8bffc9c8) at /usr/include/boost/variant/variant.hpp:2337
+#24 apply_visitor<PGQueueable::RunVis> (visitor=..., this=0x7f4f8bffc9c8) at /usr/include/boost/variant/variant.hpp:2360
+#25 apply_visitor<PGQueueable::RunVis, boost::variant<std::shared_ptr<OpRequest>, PGSnapTrim, PGScrub> > (visitable=..., visitor=...) at /usr/include/boost/variant/detail/apply_visitor_unary.hpp:60
+#26 run (handle=..., pg=..., osd=<optimized out>, this=0x7f4f8bffc9c8) at osd/OSD.h:392
+#27 OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=<optimized out>) at osd/OSD.cc:8837
+#28 0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#29 0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#30 0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#31 0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 211 (Thread 0x7f4f8abff700 (LWP 10971)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc0f58) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc0f58) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f88017040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 210 (Thread 0x7f4f89bff700 (LWP 10972)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc1098) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc1098) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f88417040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 209 (Thread 0x7f4f893fe700 (LWP 10973)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc52ce9 in WaitUntil (when=..., mutex=..., this=0x7f4ffacc11d8) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffacc11d8) at ./common/Cond.h:81
+#3  OSD::ShardedOpWQ::_process (this=0x7f4ffade51e8, thread_index=<optimized out>, hb=0x7f4f87017040) at osd/OSD.cc:8785
+#4  0x00007f500028d0c2 in ShardedThreadPool::shardedthreadpool_worker (this=0x7f4ffade4768, thread_index=<optimized out>) at common/WorkQueue.cc:340
+#5  0x00007f500028efc0 in ShardedThreadPool::WorkThreadSharded::entry (this=<optimized out>) at common/WorkQueue.h:684
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 208 (Thread 0x7f4f87fff700 (LWP 10974)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4ffade4928) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffade4928) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4ffade48a8, wt=0x7f4ff2ce50d0) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 207 (Thread 0x7f4f86fff700 (LWP 10975)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4ffade4ac0) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffade4ac0) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4ffade4a40, wt=0x7f4ff2ce5190) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 206 (Thread 0x7f4f867fe700 (LWP 10976)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500028dd5a in WaitUntil (when=..., mutex=..., this=0x7f4ffade4c58) at common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffade4c58) at common/Cond.h:81
+#3  ThreadPool::worker (this=0x7f4ffade4bd8, wt=0x7f4ff2ce51f0) at common/WorkQueue.cc:151
+#4  0x00007f500028efe0 in ThreadPool::WorkThread::entry (this=<optimized out>) at common/WorkQueue.h:445
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 205 (Thread 0x7f4f853ff700 (LWP 10977)):
+#0  0x00007f4ffe484a82 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc4693b in WaitUntil (when=..., mutex=..., this=0x7f4ffade4eb8) at ./common/Cond.h:72
+#2  WaitInterval (interval=..., mutex=..., cct=<optimized out>, this=0x7f4ffade4eb8) at ./common/Cond.h:81
+#3  OSD::heartbeat_entry (this=0x7f4ffade4000) at osd/OSD.cc:4072
+#4  0x00007f4fffcafaed in OSD::T_Heartbeat::entry (this=<optimized out>) at osd/OSD.h:1593
+#5  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 204 (Thread 0x7f4f843ff700 (LWP 10978)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50001d23c0 in Wait (mutex=..., this=0x7f4ffade6718) at ./common/Cond.h:56
+#2  Finisher::finisher_thread_entry (this=0x7f4ffade66b8) at common/Finisher.cc:96
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 203 (Thread 0x7f4f833ff700 (LWP 10979)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50001d23c0 in Wait (mutex=..., this=0x7f4ffade6378) at ./common/Cond.h:56
+#2  Finisher::finisher_thread_entry (this=0x7f4ffade6318) at common/Finisher.cc:96
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 202 (Thread 0x7f4f82bfe700 (LWP 10980)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50002869df in Wait (mutex=..., this=0x7f4ffade64d0) at common/Cond.h:56
+#2  SafeTimer::timer_thread (this=0x7f4ffade64c0) at common/Timer.cc:116
+#3  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 201 (Thread 0x7f4f823fd700 (LWP 10981)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f50002869df in Wait (mutex=..., this=0x7f4ffade6208) at common/Cond.h:56
+#2  SafeTimer::timer_thread (this=0x7f4ffade61f8) at common/Timer.cc:116
+#3  0x00007f5000287f7d in SafeTimerThread::entry (this=<optimized out>) at common/Timer.cc:38
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 200 (Thread 0x7f4f81bfc700 (LWP 10982)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4fffc83b4e in Cond::Wait (this=0x7f4ffade60a8, mutex=...) at ./common/Cond.h:56
+#2  0x00007f4fffc1db3c in OSDService::agent_entry (this=0x7f4ffade58b8) at osd/OSD.cc:554
+#3  0x00007f4fffc89d8d in OSDService::AgentThread::entry (this=<optimized out>) at osd/OSD.h:677
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 199 (Thread 0x7f4f803ff700 (LWP 11034)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f50001a9661 in poll (__timeout=-1, __nfds=4, __fds=0x7f4f803fdce0) at /usr/include/bits/poll2.h:41
+#2  SignalHandler::entry (this=0x7f4ffac3fa80) at global/signal_handler.cc:241
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 198 (Thread 0x7f4f98ffa700 (LWP 30033)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f500033b681 in poll (__timeout=-1, __nfds=1, __fds=0x7f4f98ff8c20) at /usr/include/bits/poll2.h:46
+#2  Accepter::entry (this=0x7f4ffad0e590) at msg/simple/Accepter.cc:227
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 197 (Thread 0x7f4f94ff2700 (LWP 30034)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f500033b681 in poll (__timeout=-1, __nfds=1, __fds=0x7f4f94ff0c20) at /usr/include/bits/poll2.h:46
+#2  Accepter::entry (this=0x7f4ffad0f390) at msg/simple/Accepter.cc:227
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 196 (Thread 0x7f4f967f5700 (LWP 30035)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f500033b681 in poll (__timeout=-1, __nfds=1, __fds=0x7f4f967f3c20) at /usr/include/bits/poll2.h:46
+#2  Accepter::entry (this=0x7f4ffad0fa90) at msg/simple/Accepter.cc:227
+#3  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 195 (Thread 0x7f4fc25e8700 (LWP 30077)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74036248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74035000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 194 (Thread 0x7f4f39448700 (LWP 30078)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7404d248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7404c000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 193 (Thread 0x7f4fbbbff700 (LWP 30079)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74059248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74058000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 192 (Thread 0x7f4f3f8ac700 (LWP 30080)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7406c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7406b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 191 (Thread 0x7f4f3782c700 (LWP 30081)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74077248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74076000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 190 (Thread 0x7f4facdf8700 (LWP 30082)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74195248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74194000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 189 (Thread 0x7f4fa69ea700 (LWP 30083)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74208248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74207000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 188 (Thread 0x7f4fbc27a700 (LWP 30084)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7420d248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7420c000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 187 (Thread 0x7f4f429dd700 (LWP 30085)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74212248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74211000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 186 (Thread 0x7f4f3eda1700 (LWP 30086)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74215248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74214000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 185 (Thread 0x7f4f38438700 (LWP 30087)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74220248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7421f000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 184 (Thread 0x7f4f3691d700 (LWP 30088)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f3691bad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74035000, buf=buf@entry=0x7f4f3691bc7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74035000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 183 (Thread 0x7f4fbd7f1700 (LWP 30089)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74225248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74224000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 182 (Thread 0x7f4fbd5ef700 (LWP 30090)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4fbd5edad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7404c000, buf=buf@entry=0x7f4fbd5edc7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7404c000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 181 (Thread 0x7f4f38135700 (LWP 30091)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7422a248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74229000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 180 (Thread 0x7f4f430e4700 (LWP 30092)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7422d248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7422c000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 179 (Thread 0x7f4f559dd700 (LWP 30093)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74230248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7422f000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 178 (Thread 0x7f4f552d6700 (LWP 30094)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f552d4ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7406b000, buf=buf@entry=0x7f4f552d4c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7406b000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 177 (Thread 0x7f4f41dd1700 (LWP 30095)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f41dcfad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74058000, buf=buf@entry=0x7f4f41dcfc7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74058000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 176 (Thread 0x7f4f4d054700 (LWP 30096)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74239248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74238000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 175 (Thread 0x7f4f570f4700 (LWP 30097)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74242248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74241000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 174 (Thread 0x7f4f191e4700 (LWP 30098)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7425c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f7425b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 173 (Thread 0x7f4f402b6700 (LWP 30099)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f74275248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74274000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 172 (Thread 0x7f4ffa1c0700 (LWP 30100)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f7428a248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f74289000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 171 (Thread 0x7f4fc2afe700 (LWP 30102)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4fc2afcad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7420c000, buf=buf@entry=0x7f4fc2afcc7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7420c000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 170 (Thread 0x7f4f421d5700 (LWP 30104)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f421d3ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74194000, buf=buf@entry=0x7f4f421d3c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74194000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 169 (Thread 0x7f4f36115700 (LWP 30105)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f36113ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74076000, buf=buf@entry=0x7f4f36113c7f "\377\002-H\376O\177", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74076000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 168 (Thread 0x7f4f408bc700 (LWP 30106)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f408baad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7421f000, buf=buf@entry=0x7f4f408bac7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7421f000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 167 (Thread 0x7f4fb41ea700 (LWP 30107)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4fb41e8ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74224000, buf=buf@entry=0x7f4fb41e8c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74224000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 166 (Thread 0x7f4f56aee700 (LWP 30108)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f56aecad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74214000, buf=buf@entry=0x7f4f56aecc7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74214000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 165 (Thread 0x7f4fc31bb700 (LWP 30109)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4fc31b9ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74207000, buf=buf@entry=0x7f4fc31b9c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74207000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 164 (Thread 0x7f4f418cc700 (LWP 30110)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f418caad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7422f000, buf=buf@entry=0x7f4f418cac7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7422f000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 163 (Thread 0x7f4f190e3700 (LWP 30112)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f190e1ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74211000, buf=buf@entry=0x7f4f190e1c7f "\377\002-H\376O\177", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74211000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 162 (Thread 0x7f4f413c7700 (LWP 30114)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f413c5ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74238000, buf=buf@entry=0x7f4f413c5c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74238000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 161 (Thread 0x7f4f36317700 (LWP 30115)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f36315ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74229000, buf=buf@entry=0x7f4f36315c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74229000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 160 (Thread 0x7f4f567eb700 (LWP 30117)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f567e9ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7422c000, buf=buf@entry=0x7f4f567e9c7f "\377\006", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7422c000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 159 (Thread 0x7f4f436ea700 (LWP 30118)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f436e8ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74289000, buf=buf@entry=0x7f4f436e8c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74289000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 158 (Thread 0x7f4f431e5700 (LWP 30119)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f431e3ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74241000, buf=buf@entry=0x7f4f431e3c7f "\377\002-H\376O\177", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74241000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 157 (Thread 0x7f4f3ce82700 (LWP 30120)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f3ce80ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f7425b000, buf=buf@entry=0x7f4f3ce80c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f7425b000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 156 (Thread 0x7f4f575f9700 (LWP 30121)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4f575f7ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f74274000, buf=buf@entry=0x7f4f575f7c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f74274000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 155 (Thread 0x7f4f56ef2700 (LWP 31598)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f3035d248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f3035c000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 154 (Thread 0x7f4fce5f8700 (LWP 31612)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f3035d248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f3035c000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 153 (Thread 0x7f4fb9efe700 (LWP 31644)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f30fc7248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f30fc6000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 152 (Thread 0x7f4fb51f8700 (LWP 31651)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f32675248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f32674000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 151 (Thread 0x7f4f5d2c6700 (LWP 17649)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64083248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64082000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 150 (Thread 0x7f4f604f8700 (LWP 21323)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f32675248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f32674000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 149 (Thread 0x7f4fa45f8700 (LWP 21325)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64083248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64082000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 148 (Thread 0x7f4fab9f8700 (LWP 21440)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f30fc7248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f30fc6000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 147 (Thread 0x7f4f59185700 (LWP 21775)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64186248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64185000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 146 (Thread 0x7f4f875fc700 (LWP 21782)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64186248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64185000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 145 (Thread 0x7f4f9d1db700 (LWP 21809)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640f5248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640f4000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 144 (Thread 0x7f4fe29f8700 (LWP 21810)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64140248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6413f000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 143 (Thread 0x7f4fc17ff700 (LWP 21811)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640e8248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640e7000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 142 (Thread 0x7f4fc16fe700 (LWP 21812)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640eb248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640ea000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 141 (Thread 0x7f4f5068a700 (LWP 21814)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6416f248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6416e000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 140 (Thread 0x7f4f4d3d9700 (LWP 21816)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640f5248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640f4000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 139 (Thread 0x7f4f5033d700 (LWP 21817)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64172248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64171000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 138 (Thread 0x7f4f5053f700 (LWP 21818)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64176248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64175000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 137 (Thread 0x7f4f4cc50700 (LWP 21819)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64140248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6413f000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 136 (Thread 0x7f4f6a7ff700 (LWP 21820)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640e8248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640e7000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 135 (Thread 0x7f4f4cb4f700 (LWP 21821)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6416f248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6416e000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 134 (Thread 0x7f4f43fc1700 (LWP 21822)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640eb248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640ea000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 133 (Thread 0x7f4f42bd1700 (LWP 21825)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64176248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64175000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 132 (Thread 0x7f4f41ac6700 (LWP 21826)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64172248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64171000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 131 (Thread 0x7f4f409bd700 (LWP 21842)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64065248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64064000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 130 (Thread 0x7f4fe15f8700 (LWP 21844)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64065248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64064000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 129 (Thread 0x7f4f5877b700 (LWP 21867)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6418d248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6418c000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 128 (Thread 0x7f4f5897d700 (LWP 21868)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6418d248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6418c000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 127 (Thread 0x7f4f6bcfc700 (LWP 21884)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64027248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64026000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 126 (Thread 0x7f4fb05f8700 (LWP 21885)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64027248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64026000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 125 (Thread 0x7f4f36f23700 (LWP 21919)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64049248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64048000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 124 (Thread 0x7f4fed9f3700 (LWP 21920)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64049248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64048000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 123 (Thread 0x7f4f5003a700 (LWP 21921)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640d9248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640d8000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 122 (Thread 0x7f4f5aca0700 (LWP 21922)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640d9248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640d8000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 121 (Thread 0x7f4fdf9f8700 (LWP 21931)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640c3248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640c2000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 120 (Thread 0x7f4f5887c700 (LWP 21932)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640c3248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640c2000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 119 (Thread 0x7f4f5e4d8700 (LWP 21933)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6407b248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6407a000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 118 (Thread 0x7f4f6cfff700 (LWP 21934)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6407b248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6407a000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 117 (Thread 0x7f4f84bfe700 (LWP 21943)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64132248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64131000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 116 (Thread 0x7f4f656fa700 (LWP 21944)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64132248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64131000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 115 (Thread 0x7f4fdc9f8700 (LWP 21949)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64147248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64146000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 114 (Thread 0x7f4f5e9dd700 (LWP 21950)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64147248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64146000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 113 (Thread 0x7f4f5dfd3700 (LWP 21983)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64157248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64156000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 112 (Thread 0x7f4f5f0e4700 (LWP 21984)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64157248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64156000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 111 (Thread 0x7f4f5ded2700 (LWP 21987)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6415e248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6415d000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 110 (Thread 0x7f4f5b5a9700 (LWP 21988)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6415e248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6415d000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 109 (Thread 0x7f4f6bbfb700 (LWP 22017)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640b7248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640b6000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 108 (Thread 0x7f4f7fbfe700 (LWP 22018)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640b7248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640b6000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 107 (Thread 0x7f4f5c0b4700 (LWP 22035)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640e2248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640e1000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 106 (Thread 0x7f4f4ff39700 (LWP 22036)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640e2248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640e1000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 105 (Thread 0x7f4f5fbef700 (LWP 22037)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64178248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64177000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 104 (Thread 0x7f4fa7df8700 (LWP 22038)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64178248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64177000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 103 (Thread 0x7f4fd7df6700 (LWP 22039)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6417b248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6417a000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 102 (Thread 0x7f4f5f6ea700 (LWP 22040)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6417b248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6417a000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 101 (Thread 0x7f4f5dbcf700 (LWP 22055)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640b4248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640b3000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 100 (Thread 0x7f4f8b7fd700 (LWP 22056)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640b4248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640b3000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 99 (Thread 0x7f4f6f7ff700 (LWP 22057)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640d7248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640d6000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 98 (Thread 0x7f4f5cbbf700 (LWP 22058)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640d7248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640d6000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 97 (Thread 0x7f4f8d2fc700 (LWP 22071)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64099248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64098000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 96 (Thread 0x7f4f85ffd700 (LWP 22072)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64099248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64098000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 95 (Thread 0x7f4f6cefe700 (LWP 22078)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6417e248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6417d000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 94 (Thread 0x7f4f6cdfd700 (LWP 22079)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6417e248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6417d000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 93 (Thread 0x7f4f699fd700 (LWP 22084)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64183248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64182000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 92 (Thread 0x7f4f5013b700 (LWP 22085)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64183248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64182000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 91 (Thread 0x7f4f5f7eb700 (LWP 22093)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6415a248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64159000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 90 (Thread 0x7f4f608fc700 (LWP 22094)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6415a248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64159000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 89 (Thread 0x7f4f5c7bb700 (LWP 22103)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640ba248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640b9000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 88 (Thread 0x7f4f60bff700 (LWP 22104)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640ba248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640b9000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 87 (Thread 0x7f4f5fdf1700 (LWP 22139)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6404c248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6404b000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 86 (Thread 0x7f4f5a599700 (LWP 22140)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6404c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6404b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 85 (Thread 0x7f4f9c4e7700 (LWP 22167)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6403b248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6403a000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 84 (Thread 0x7f4f3c074700 (LWP 22168)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6403b248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6403a000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 83 (Thread 0x7f4f651f5700 (LWP 22174)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6414a248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64149000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 82 (Thread 0x7f4f59c90700 (LWP 22175)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6414a248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64149000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 81 (Thread 0x7f4f8defd700 (LWP 22186)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64086248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64085000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 80 (Thread 0x7f4fa13ff700 (LWP 22187)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64086248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64085000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 79 (Thread 0x7f4f58f83700 (LWP 22194)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6404f248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6404e000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 78 (Thread 0x7f4f37428700 (LWP 22195)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6404f248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6404e000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 77 (Thread 0x7f4fd19f8700 (LWP 22196)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6414d248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6414c000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 76 (Thread 0x7f4f5e2d6700 (LWP 22197)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6414d248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6414c000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 75 (Thread 0x7f4f612fe700 (LWP 22214)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6418b248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6418a000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 74 (Thread 0x7f4fbabef700 (LWP 22215)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6418b248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6418a000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 73 (Thread 0x7f4f5e7db700 (LWP 22216)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6406e248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6406d000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 72 (Thread 0x7f4f6dfff700 (LWP 22217)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6406e248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6406d000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 71 (Thread 0x7f4f8d3fd700 (LWP 22219)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640e0248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640df000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 70 (Thread 0x7f4f6a3fb700 (LWP 22220)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640e0248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640df000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 69 (Thread 0x7f4fac5f8700 (LWP 22221)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6403e248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6403d000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 68 (Thread 0x7f4f6a6fe700 (LWP 22222)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6403e248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6403d000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 67 (Thread 0x7f4f5043e700 (LWP 22223)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6406c248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6406b000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 66 (Thread 0x7f4f6efff700 (LWP 22224)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6406c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6406b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 65 (Thread 0x7f4f5a094700 (LWP 22225)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64143248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64142000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 64 (Thread 0x7f4f9fbff700 (LWP 22226)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64143248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64142000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 63 (Thread 0x7f4f58e82700 (LWP 22227)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640dc248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640db000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 62 (Thread 0x7f4f59286700 (LWP 22228)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640dc248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640db000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 61 (Thread 0x7f4f698fc700 (LWP 22229)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640de248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640dd000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 60 (Thread 0x7f4f6befe700 (LWP 22230)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640de248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640dd000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 59 (Thread 0x7f4ff09cb700 (LWP 22231)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64116248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64115000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 58 (Thread 0x7f4f59d91700 (LWP 22232)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64116248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64115000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 57 (Thread 0x7f4f5c1b5700 (LWP 22239)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640bd248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640bc000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 56 (Thread 0x7f4fa39ea700 (LWP 22240)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640bd248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640bc000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 55 (Thread 0x7f4f5f9ed700 (LWP 22247)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64011248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64010000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 54 (Thread 0x7f4f6c5fd700 (LWP 22248)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64011248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64010000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 53 (Thread 0x7f4f5b4a8700 (LWP 22251)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64013248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64012000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 52 (Thread 0x7f4f8a2fd700 (LWP 22252)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64013248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64012000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 51 (Thread 0x7f4fca1f8700 (LWP 22253)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6412f248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6412e000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 50 (Thread 0x7f4f655f9700 (LWP 22254)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6412f248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6412e000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 49 (Thread 0x7f4f5a89c700 (LWP 22255)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64081248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64080000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 48 (Thread 0x7f4f417cb700 (LWP 22256)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64081248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64080000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 47 (Thread 0x7f4fb2df8700 (LWP 22257)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64135248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64134000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 46 (Thread 0x7f4fbc9ef700 (LWP 22258)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64135248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64134000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 45 (Thread 0x7f4f9f5ea700 (LWP 22281)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64089248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64088000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 44 (Thread 0x7f4fcb9f8700 (LWP 22282)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64089248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64088000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 43 (Thread 0x7f4f59b8f700 (LWP 22302)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6408c248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6408b000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 42 (Thread 0x7f4f5b2a6700 (LWP 22303)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6408c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6408b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 41 (Thread 0x7f4f6f6fe700 (LWP 22304)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640c9248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640c8000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 40 (Thread 0x7f4f5a498700 (LWP 22305)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640c9248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640c8000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 39 (Thread 0x7f4f5b3a7700 (LWP 22306)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640c0248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640bf000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 38 (Thread 0x7f4f7f9fc700 (LWP 22307)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640c0248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640bf000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 37 (Thread 0x7f4fcfdf8700 (LWP 22308)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64162248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64161000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 36 (Thread 0x7f4f889fb700 (LWP 22309)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64162248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64161000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 35 (Thread 0x7f4f607fb700 (LWP 22310)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6416a248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64169000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 34 (Thread 0x7f4f61efe700 (LWP 22311)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6416a248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64169000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 33 (Thread 0x7f4fec9f9700 (LWP 22312)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64007248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64006000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 32 (Thread 0x7f4f905e1700 (LWP 22313)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64007248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64006000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 31 (Thread 0x7f4f60afe700 (LWP 22314)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64153248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64152000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 30 (Thread 0x7f4f613ff700 (LWP 22315)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64153248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64152000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 29 (Thread 0x7f4f5b8ac700 (LWP 22316)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64060248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6405f000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 28 (Thread 0x7f4f5023c700 (LWP 22317)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64060248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6405f000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 27 (Thread 0x7f4f5b9ad700 (LWP 22318)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6411a248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64119000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 26 (Thread 0x7f4f609fd700 (LWP 22319)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6411a248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64119000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 25 (Thread 0x7f4f5f4e8700 (LWP 22321)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64009248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64008000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 24 (Thread 0x7f4fc89f8700 (LWP 22322)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64009248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64008000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 23 (Thread 0x7f4fd6de8700 (LWP 22323)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f642e1248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f642e0000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 22 (Thread 0x7f4fe41f8700 (LWP 22324)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f642e1248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f642e0000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 21 (Thread 0x7f4f652f6700 (LWP 22325)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640e5248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640e4000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 20 (Thread 0x7f4f611fd700 (LWP 22326)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640e5248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640e4000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 19 (Thread 0x7f4f65bff700 (LWP 22327)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6400c248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6400b000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 18 (Thread 0x7f4fa8df8700 (LWP 22328)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6400c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6400b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 17 (Thread 0x7f4f5f3e7700 (LWP 22329)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6418f248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6418e000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 16 (Thread 0x7f4f7fafd700 (LWP 22331)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6418f248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6418e000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 15 (Thread 0x7f4f8d1fb700 (LWP 22332)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f6411c248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f6411b000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7f4fd2df8700 (LWP 22333)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f6411c248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f6411b000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7f4f435e9700 (LWP 22335)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f642df248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f642de000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7f4fb9fff700 (LWP 22337)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f642df248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f642de000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7f4f84afd700 (LWP 22338)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64151248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64150000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7f4f4fe38700 (LWP 22339)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64151248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64150000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7f4f635fe700 (LWP 22340)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f640d5248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f640d4000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7f4fccdf8700 (LWP 22341)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f640d5248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f640d4000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7f4f88afc700 (LWP 22342)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64155248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64154000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7f4f38d41700 (LWP 22343)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64155248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64154000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7f4f5ede1700 (LWP 22392)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f5000392ec5 in Wait (mutex=..., this=0x7f4f64024248) at ./common/Cond.h:56
+#2  Pipe::reader (this=0x7f4f64023000) at msg/simple/Pipe.cc:1534
+#3  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f4f2deec700 (LWP 22393)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f64024248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f64023000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f4f812fa700 (LWP 29968)):
+#0  0x00007f4ffe4846d5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f500039934f in Wait (mutex=..., this=0x7f4f77829248) at ./common/Cond.h:56
+#2  Pipe::writer (this=0x7f4f77828000) at msg/simple/Pipe.cc:1869
+#3  0x00007f500039c22d in Pipe::Writer::entry (this=<optimized out>) at msg/simple/Pipe.h:63
+#4  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f4fab1f8700 (LWP 29969)):
+#0  0x00007f4ffcb01bcd in poll () from /lib64/libc.so.6
+#1  0x00007f5000384cc2 in poll (__timeout=<optimized out>, __nfds=1, __fds=0x7f4fab1f6ad0) at /usr/include/bits/poll2.h:46
+#2  Pipe::tcp_read_wait (this=<optimized out>) at msg/simple/Pipe.cc:2508
+#3  0x00007f5000385328 in Pipe::tcp_read (this=this@entry=0x7f4f77828000, buf=buf@entry=0x7f4fab1f6c7f "\377", len=len@entry=1) at msg/simple/Pipe.cc:2478
+#4  0x00007f5000392a4f in Pipe::reader (this=0x7f4f77828000) at msg/simple/Pipe.cc:1545
+#5  0x00007f500039c20d in Pipe::Reader::entry (this=<optimized out>) at msg/simple/Pipe.h:52
+#6  0x00007f4ffe480dc5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4ffcb0c21d in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f4fff89b840 (LWP 31915)):
+#0  0x00007f4ffe481ef7 in pthread_join () from /lib64/libpthread.so.0
+#1  0x00007f5000280810 in Thread::join (this=this@entry=0x7f4ffad0e140, prval=prval@entry=0x0) at common/Thread.cc:171
+#2  0x00007f5000359bd2 in DispatchQueue::wait (this=this@entry=0x7f4ffad0ded0) at msg/simple/DispatchQueue.cc:226
+#3  0x00007f50002754e2 in SimpleMessenger::wait (this=0x7f4ffad0dd00) at msg/simple/SimpleMessenger.cc:543
+#4  0x00007f4fffbd247b in main (argc=<optimized out>, argv=<optimized out>) at ceph_osd.cc:623
